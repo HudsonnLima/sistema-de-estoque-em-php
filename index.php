@@ -43,6 +43,7 @@ $routes = [
     '/login' => 'app/views/home/login/index.php',
     '/login/remember' => 'app/views/home/login/remember.php',
     '/login/newpass' => 'app/views/home/login/newpass.php',
+    '/login/recoverypass' => 'app/views/home/login/recoverypass.php',
 
     '/logout' => 'app/views/home/logout.php',
 

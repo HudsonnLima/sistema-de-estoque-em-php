@@ -20,7 +20,7 @@ class PasswordRecovery
         $retorno = [];
 
         if (empty($email)) {
-            $retorno['alert'] = '<div class="trigger infor">Por favor, insira um e-mail válido.</div>';
+            $retorno['alert'] = '<div class="alert alert-danger">Por favor, insira um e-mail válido.</div>';
             return $retorno;
         }
 
@@ -33,7 +33,7 @@ class PasswordRecovery
         $user = $stmt->fetch();
 
         if (!$user) {
-            $retorno['naoencontrado'] = '<div class="trigger warning">E-mail não encontrado em nossos registros.</div>';
+            $retorno['naoencontrado'] = '<div class="alert alert-primary ">E-mail não encontrado em nossos registros.</div>';
             return $retorno;
         }
 
@@ -66,7 +66,7 @@ class PasswordRecovery
         );
 
         if ($enviado) {
-            $_SESSION['sucesso'] = 'E-mail enviado com sucesso! Verifique sua caixa de entrada.';
+            $_SESSION['sucesso'] = 'E-mail enviado com sucesso!<br>Verifique sua caixa de entrada.';
             header("Location: " . BASE_LOGIN);
             exit;
         } else {

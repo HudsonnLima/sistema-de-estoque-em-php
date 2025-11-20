@@ -1,7 +1,7 @@
 <?php
-require_once BASE_CONF . '/database.php';
-session_start();
 
+
+use App\Core\Database;
 $db = new Database();
 $pdo = $db->getConnection();
 

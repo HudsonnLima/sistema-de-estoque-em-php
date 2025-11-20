@@ -1,4 +1,5 @@
 <?php
+
 use App\Core\Database;
 use App\Models\ModelLogin;
 use App\Controllers\ControllerLogin;
@@ -13,7 +14,7 @@ $loginData = $controller->processLogin();
 
 $userEmail = $loginData['userEmail'];
 $userId = $loginData['userId'];
-$error = $loginData['error'];
+
 ?>
 
 
@@ -23,18 +24,15 @@ $error = $loginData['error'];
         <div class="card-login">
             <?php
             if (isset($_SESSION['sucesso'])) {
-                echo '<div class="trigger accept">' . $_SESSION['sucesso'] . '</div>';
+                echo '<div class="alert alert-success">' . htmlspecialchars_decode($_SESSION['sucesso']) . '</div>';
                 unset($_SESSION['sucesso']);
             }
-
             if (isset($_SESSION['erro'])) {
-                echo '<div class="trigger error">' . $_SESSION['erro'] . '</div>';
+                echo '<div class="alert alert-danger">' . htmlspecialchars_decode($_SESSION['erro']) . '</div>';
                 unset($_SESSION['erro']);
             }
             ?>
-            <?php if ($error): ?>
-                <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
-            <?php endif; ?>
+
 
             <div class="form-floating mb-3">
                 <input name="user_name" type="text" class="form-control" id="floatingInput" value="<?php echo htmlspecialchars($userEmail); ?>" required>

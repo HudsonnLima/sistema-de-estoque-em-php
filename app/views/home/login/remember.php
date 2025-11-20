@@ -1,13 +1,13 @@
 <?php
 ob_start();
 require_once dirname(__DIR__, 4) . '/vendor/autoload.php';
-require_once BASE_CONF . '/database.php';
 
 
 use App\Models\PasswordRecovery;
 
 // Instancia a conexão
-$db = new \Database();
+use App\Core\Database;
+$db = new Database();
 $pdo = $db->getConnection();
 
 $passwordRecovery = new PasswordRecovery($pdo);
