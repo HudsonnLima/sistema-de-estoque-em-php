@@ -1,0 +1,69 @@
+app/
+│
+├── api/
+│    ├── autocomplete.php
+│    ├── excluirCompra.php
+│
+├── config/
+│     ├── config.php
+│
+├── controllers/
+│     ├── ComprasController.php
+│
+├── core/
+│    ├── App.php
+│    ├── Controller.php
+│    ├── Database.php
+│
+├── Helpers/
+│   ├── PHPMailerHelper.php
+│
+├── Models/
+│   ├── Compra.php
+│   ├── EmailFromTech.php
+│   ├── EmailFromUser.php
+│   ├── EmailModel.php
+│   ├── ExampleModel.php
+│   ├── ModelLogin.php
+│   ├── PasswordRecovery.php
+│
+├── views/
+│   ├── home
+│   │	  ├── login/
+│   │	  │	├── index.php
+│   │	  │	├── newpass.php
+│   │     │	├── recoverypass.php
+│   │	  │	├── remember.php
+│   │	  │	├── send_token.php
+│   │	  │	├── update_pass.php
+│   │     ├── pages/
+│   │	  │	├── compras/
+│   │	  │	├── configuracao/
+│   │	  │	├── estoque/
+│   │	  │	├── fornecedor/
+│   │	  │	├── relatorios/
+│   │	  │	├── usuarios/
+│   │	  │	├── home.php	
+│   │	  ├── index.php	
+│   │	  ├── logout.php
+│   │     
+│   ├── layouts
+│   │	  ├── footer.php	
+│   │	  ├── header.php	
+│   │	  ├── menu.php	
+│   │
+│   ├── .htaccess   
+│   ├── init.php		
+│
+├── public/
+│   ├── css/
+│   ├── images/	
+│   ├── js/
+│
+├── vendor
+├── .htaccess
+├── composer.json
+├── composer.lock
+├── documentacao.txt
+├── index.php
+

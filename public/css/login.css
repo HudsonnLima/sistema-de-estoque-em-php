@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@400;800 & display=swap');
+body{margin: 0; background-color: rgb(255, 255, 255); font-family: 'Noto Sans', sans-serif; }
+body * {box-sizing: border-box;}
+.main-login{width:100vw;height:100vh;display:flex;justify-content: center; align-items: center;}
+
+
+.login{width: 50vw; height: 100vh;display:flex;justify-content: center; align-items: center;}
+.card-login{width: 60%;display:flex;justify-content: center; align-items: center;flex-direction: column;padding: 30px 35px; background:#fbfbfd; border-radius: 10px;box-shadow: 0px 5px 10px #00000056;}
+.form-floating {width:100%;}
+.btn-login{width: 100%;padding: 16px 0px;margin: 25px;border: none;border-radius: 10px;outline: none;text-transform: uppercase;font-weight: 600;letter-spacing: 3px;color:#fff;background: #0D6EFD;
+    cursor: pointer;}
+
+.option-login {width: 100%;display: flex; margin-top: 15px; color: #000; align-items: baseline;}
+.option-login{font-family: sans-serif; font-size: 12pt; color: #FFF; text-decoration: none;}
+.remember{width: 30vw; color: #CCC; font-size: 10pt;}
+.remember > h1 {font-size: 10pt;}
+.recover {width: 30vw; text-align: right; }
+.recover a {font-family: sans-serif; font-size: 10pt; color: #ccc; text-decoration: none; }  
+.recover a:hover{color:#999}
+
+.autor > h1 {font-size: 10pt; color: #ccc; font-weight: 600;margin: 0;}
+.autor > h2 {font-size: 8pt; color: #ccc; text-align: center;}
+.autor a {color:#ccc; text-decoration: none;}
+.autor a:hover{color:#999}
+
+/*MENSAGENS DO SISTEM*/
+.trigger{padding: 15px 15px 15px 40px; background: #eee; font-size: 14px; margin-bottom: 15px;}
+.trigger a{font-weight: 600; font-size: 12px; text-transform: uppercase; padding: 5px 15px; background: #069; color: #fff;}
+.trigger a:hover{background: #09f; color: #fff;}
+
+.accept{width: 100%; border-radius: 5px; background: #71ca73 url(../icons/accept.png) center left 10px no-repeat}
+.infor{width: 100%; border-radius: 5px; background:  #c8dbfd url(../icons/infor.png) center left 10px no-repeat}
+.allert0{width: 100%; border-radius: 5px; background:  #faf7b7 url(../icons/alert.png) center left 10px no-repeat}
+.error{width: 100%; border-radius: 5px; background:  #ffafaf url(../icons/error.png) center left 10px no-repeat}
+
+@media only screen and (max-width: 950px){
+    .card-login{width:100%
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .main-login{flex-direction:column;}
+    .left-login > h1{display: none;}
+    .left-login{width: 100%;height: auto;}
+    .left-login-image {width: 50vw;}
+    .right-login{width: 100%;height: auto;}
+    .card-login{width: 90%;}
+    .recover a {font-size: 8pt;}
+    .remember{font-size: 8pt;}
+
+}
+
+@media only screen and (max-width: 420px){
+    .card-login{width:100%}
+    .login{width: 90%;}
+    .remember{width: 100%;float: left;}
+    .recover {width: 100%;float: right; } 
+
+}
+
+@media only screen and (max-width: 1030px){
+    .remember{width: 50%;float: left;}
+    .recover {width: 50%;float: right; } 
+    .recover a{font-size: 8pt;}
+}
+
+@media only screen and (max-width: 540px){
+    .card-login{width:100%}
+    .login{width: 90%;}
+    .remember{width: 50%;float: left;font-size: 12pt;}
+    .recover {width: 50%;float: right; } 
+    .recover a{font-size: 12pt;}
+    .autor > h1{font-size: 12pt;}
+    .autor > h2{font-size: 10pt;}
+}
+

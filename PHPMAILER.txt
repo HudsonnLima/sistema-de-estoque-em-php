@@ -1,0 +1,30 @@
+Helpers/PHPMailerHelper.php
+Configurações Gerais do PHPMailer.
+Para configurar manualmente o email que irá receber, basta remover a query e definir as constantes manualmente.
+ 
+Models/EmailCompras.php
+Configura o corpo do email.
+
+http://localhost/modelo/app/views/home/pages/compras/email.php
+Testes sendo feito diretamente nesse arquivo.
+
+Controller/EmailController.php e Models/EmailModel.php
+Verifica se o email do usuário (que irá receber) existe.
+
+No arquivo que irá disparar o Email
+Ex.: Após cadastrar uma compra
+
+Incluir o arquivo
+use App\Models\EmailCompras;
+
+// Enviar e-mails de confirmação para o usuário.
+$userName = $_SESSION['user_name'] ?? 'Usuário não encontrado';
+$mail= $_SESSION['user_email'] ?? 'Email não encontrado';
+$fromUser = new EmailCompras($pdo);
+$usr_enviado = $fromUser->sendConfirmationToUser$mail= $userName);
+
+
+
+Obs: sendConfirmationToUser Models/EmailCompras.php
+
+
